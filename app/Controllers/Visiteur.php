@@ -1,45 +1,46 @@
 <?php
 
-namespace App\Controllers; //Namespace pour utiliser fct contrôleur
-use App\Models\ModeleArticle; //Namespace pour utiliser fct Modèle (new ModelArticle)
-use App\Models\ModeleUtilisateur; //Namespace pour utiliser fct Modèle (new ModeleUtilisateur)
+namespace App\Controllers;
+
+use App\Models\ModeleArticle;
+use App\Models\ModeleUtilisateur;
 
 helper(['assets']);
 class Visiteur extends BaseController
 {
     public function listerLesArticles()
     {
-        $modelArt = new ModeleArticle(); //instanciation du modèle
-        $data['lesArticles'] = $modelArt->retournerArticles(); //récupération des donnes via le modèle
+        $modelArt = new ModeleArticle();
+        $data['lesArticles'] = $modelArt->retournerArticles();
         $data['TitreDeLaPage'] = 'Tous les articles';
-        echo view('templates/header'); //envoi du header
-        echo view('visiteur/listerLesArticles', $data); //envoi vue + données
-        echo view('templates/footer'); //envoi du footer
+        echo view('templates/header');
+        echo view('visiteur/listerLesArticles', $data);
+        echo view('templates/footer');
     }
 
     public function listerLesArticlesAvecPagination()
     {
         $pager = \Config\Services::pager();
-        $modelArt = new ModeleArticle(); //instanciation du modèle
-        $data['lesArticles'] = $modelArt->paginate(3); //récupération des données via le modèle
+        $modelArt = new ModeleArticle();
+        $data['lesArticles'] = $modelArt->paginate(3);
         $data['pager'] = $modelArt->pager;
         $data['TitreDeLaPage'] = 'Tous les articles';
-        echo view('templates/header'); //envoi du header
-        echo view('visiteur/listerLesArticlesAvecPagination', $data); //envoi vue + données
-        echo view('templates/footer'); //envoi du footer
-    } // fin listerLesArticlesAvecPagination
+        echo view('templates/header');
+        echo view('visiteur/listerLesArticlesAvecPagination', $data);
+        echo view('templates/footer');
+    }
 
-    public function voirUnArticle($noArticle = NULL) // valeur par défaut de noArticle = NULL
+    public function voirUnArticle($noArticle = NULL)
     {
-        $modelArt = new ModeleArticle(); //instanciation du modéle
-        $data['unArticle'] = $modelArt->retournerArticles($noArticle); //rédupération des données via le modèle
-        if (empty($data['unArticle'])) { // pas d'article correspondant au n°
+        $modelArt = new ModeleArticle();
+        $data['unArticle'] = $modelArt->retournerArticles($noArticle);
+        if (empty($data['unArticle'])) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
         $data['TitreDeLaPage'] = $data['unArticle']['cTitre'];
-        echo view('templates/header'); //envoi du header
-        echo view('visiteur/voirUnArticle', $data); //envoi vue + données
-        echo view('templates/footer'); //envoi du footer
+        echo view('templates/header');
+        echo view('visiteur/voirUnArticle', $data);
+        echo view('templates/footer');
     }
 
     public function seConnecter()
@@ -48,11 +49,11 @@ class Visiteur extends BaseController
         $session = session();
         $data['TitreDeLaPage'] = 'Se connecter';
 
-        $rules = [ //régles de validation
+        $rules = [
             'txtIdentifiant' => 'required',
             'txtMotDePasse' => 'required'
         ];
-        $messages = [ //message à renvoyer en cas de non-respect des règles de validation
+        $messages = [
             'txtIdentifiant' => [
                 'required' => 'Un Identifiant est requis'
             ],
@@ -62,18 +63,15 @@ class Visiteur extends BaseController
         ];
 
         if (!$this->validate($rules, $messages)) {
-            if ($_POST) $data['TitreDeLaPage'] = "Corriger votre formulaire"; //if ($this->request->getMethod()=='post') // si c'est une tentative d'enregistrement // erreur IDE !!
+            if ($_POST) $data['TitreDeLaPage'] = "Corriger votre formulaire";
             echo view('templates/header', $data);
-            echo view('visiteur/seConnecter'); // renvoi formulaire
-        } else { // formulaire validé
-            // on récupère les données du formulaire de connexion
+            echo view('visiteur/seConnecter');
+        } else {
             $Identifiant = $this->request->getPost('txtIdentifiant');
             $MdP = $this->request->getPost('txtMotDePasse');
-            // on va chercher l'utilisateur correspondant aux Id et MdPasse saisis
-            $modelUti = new ModeleUtilisateur(); //instanciation du modèle
+            $modelUti = new ModeleUtilisateur();
             $UtilisateurRetourne = $modelUti->retournerUtilisateur($Identifiant, $MdP);
-
-            if (!($UtilisateurRetourne == null)) {  // on a trouvé, identifiant et statut (droit) sont stockés en session
+            if (!($UtilisateurRetourne == null)) {
                 $session->set('identifiant', $UtilisateurRetourne["cIdentifiant"]);
                 $session->set('statut', $UtilisateurRetourne["cStatut"]);
                 $data['Identifiant'] = $Identifiant;
@@ -81,13 +79,12 @@ class Visiteur extends BaseController
                 echo view('visiteur/connexionReussie');
             } else {
                 if ($_POST) $data['TitreDeLaPage'] = "Logging inexistant";
-                // utilisateur non trouvé on renvoie le formulaire de connexion
                 echo view('templates/header', $data);
                 echo view('visiteur/seConnecter');
             }
         }
         echo view('templates/footer');
-    } // fin seConnecter
+    }
 
     public function seDeconnecter()
     {

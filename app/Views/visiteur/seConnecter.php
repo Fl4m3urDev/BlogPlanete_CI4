@@ -1,11 +1,8 @@
 <div class="container mt-5">
     <h2><?php echo $TitreDeLaPage ?></h2>
     <?php
-    if ($TitreDeLaPage == 'Corriger votre formulaire') echo service('validation')->listErrors(); // mise en place de la validation
-    /* set_value : en cas de non validation les données déjà 
-saisies sont réinjectées dans le formulaire */
+    if ($TitreDeLaPage == 'Corriger votre formulaire') echo service('validation')->listErrors();
     echo form_open('visiteur/seconnecter');
-    // creation d'un label devant la zone de saisie
     echo csrf_field(); ?>
     <div class="mb-3 mt-3">
         <?php echo form_label('Identifiant', 'txtIdentifiant', ['class' => 'form-label']);

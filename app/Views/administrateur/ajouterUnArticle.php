@@ -1,6 +1,6 @@
 <h2><?php echo $TitreDeLaPage ?></h2>
 <?php
-if ($TitreDeLaPage == 'Corriger votre article') echo service('validation')->listErrors(); // mise en place de la validation
+if ($TitreDeLaPage == 'Corriger votre article') echo service('validation')->listErrors();
 echo form_open('administrateur/ajouterUnArticle') ?>
 <?php echo csrf_field(); ?>
 <label for="txtTitre">Titre de l'article</label>

@@ -1,16 +1,15 @@
 <?php
 
-namespace App\Models; //espace de noms
+namespace App\Models;
 use CodeIgniter\Model;
 
 class ModeleUtilisateur extends Model
 {
-    protected $table = 'tabutilisateur'; //definition de la table principale
+    protected $table = 'tabutilisateur';
     //protected $primaryKey = 'cNo';
     public function retournerUtilisateur($pId, $MotdePasse)
     {
         return $this->where(['cIdentifiant' => $pId, 'cMotDePasse' => $MotdePasse])->first();
-        // <=> SELECT * FROM tabutilisateur  WHERE cIdentifiant='$pId' and cMotDePasse='$MotdePasse'
-    } // retournerUtilisateur
+    }
 
-} // Fin Classe
+}
