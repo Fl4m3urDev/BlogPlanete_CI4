@@ -12,13 +12,13 @@
 
 <body>
     <div class="p-5 bg-primary text-white text-center">
-        <h1>Mon fabuleux blog</h1>
+        <h1>Le fabuleux blog</h1>
         <p>Une réalisation totalement interplanétaire !</p>
     </div>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 
         <a class="navbar-brand" href="#">
-            <img src="<?php echo img_url('LeFeuDeLaMort.png') ?>" alt="Logo" style="width:40px;">
+            <img width=40 src="<?php echo img_url('LeFeuDeLaMort.png') ?>" alt="Logo">
         </a>
         <div class="container-fluid justify-content-center">
             <ul class="navbar-nav">

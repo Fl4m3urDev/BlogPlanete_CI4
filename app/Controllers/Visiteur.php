@@ -13,9 +13,9 @@ class Visiteur extends BaseController
         $modelArt = new ModeleArticle();
         $data['lesArticles'] = $modelArt->retournerArticles();
         $data['TitreDeLaPage'] = 'Tous les articles';
-        echo view('templates/header');
-        echo view('visiteur/listerLesArticles', $data);
-        echo view('templates/footer');
+        return view('templates/header')
+        .view('visiteur/listerLesArticles', $data)
+        .view('templates/footer');
     }
 
     public function listerLesArticlesAvecPagination()
@@ -25,9 +25,9 @@ class Visiteur extends BaseController
         $data['lesArticles'] = $modelArt->paginate(3);
         $data['pager'] = $modelArt->pager;
         $data['TitreDeLaPage'] = 'Tous les articles';
-        echo view('templates/header');
-        echo view('visiteur/listerLesArticlesAvecPagination', $data);
-        echo view('templates/footer');
+        return view('templates/header')
+        .view('visiteur/listerLesArticlesAvecPagination', $data)
+        .view('templates/footer');
     }
 
     public function voirUnArticle($noArticle = NULL)
@@ -38,9 +38,9 @@ class Visiteur extends BaseController
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
         $data['TitreDeLaPage'] = $data['unArticle']['cTitre'];
-        echo view('templates/header');
-        echo view('visiteur/voirUnArticle', $data);
-        echo view('templates/footer');
+        return view('templates/header')
+        .view('visiteur/voirUnArticle', $data)
+        .view('templates/footer');
     }
 
     public function seConnecter()
@@ -79,11 +79,11 @@ class Visiteur extends BaseController
                 echo view('visiteur/connexionReussie');
             } else {
                 if ($_POST) $data['TitreDeLaPage'] = "Logging inexistant";
-                echo view('templates/header', $data);
-                echo view('visiteur/seConnecter');
+                return view('templates/header', $data)
+                .view('visiteur/seConnecter');
             }
         }
-        echo view('templates/footer');
+        return view('templates/footer');
     }
 
     public function seDeconnecter()
