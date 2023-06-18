@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\ModeleArticle;
 use App\Models\ModeleUtilisateur;
+use App\Models\ModeleAvis;
 
 helper(['assets']);
 class Visiteur extends BaseController
@@ -34,10 +35,12 @@ class Visiteur extends BaseController
     {
         $modelArt = new ModeleArticle();
         $data['unArticle'] = $modelArt->retournerArticles($noArticle);
-        if (empty($data['unArticle'])) {
+        $modelAvis = new ModeleAvis();
+        $data['lesAvis'] = $modelAvis->retournerAvisParArticles($noArticle);
+        if (empty($data['unArticle']) ) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
-        $data['TitreDeLaPage'] = $data['unArticle']['cTitre'];
+        $data['TitreDeLaPage'] = $data['unArticle']['TITRE'];
         return view('templates/header')
         .view('visiteur/voirUnArticle', $data)
         .view('templates/footer');
@@ -72,8 +75,8 @@ class Visiteur extends BaseController
             $modelUti = new ModeleUtilisateur();
             $UtilisateurRetourne = $modelUti->retournerUtilisateur($Identifiant, $MdP);
             if (!($UtilisateurRetourne == null)) {
-                $session->set('identifiant', $UtilisateurRetourne["cIdentifiant"]);
-                $session->set('statut', $UtilisateurRetourne["cStatut"]);
+                $session->set('identifiant', $UtilisateurRetourne["IDENTIFIANT"]);
+                $session->set('statut', $UtilisateurRetourne["STATUT"]);
                 $data['Identifiant'] = $Identifiant;
                 echo view('templates/header', $data);
                 echo view('visiteur/connexionReussie');

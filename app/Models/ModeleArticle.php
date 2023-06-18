@@ -6,9 +6,9 @@ use CodeIgniter\Model;
 
 class ModeleArticle extends Model
 {
-    protected $table = 'tabarticle';
-    protected $primaryKey = 'cNo';
-    protected $allowedFields = ['cTitre', 'cTexte', 'cNomFichierImage'];
+    protected $table = 'article';
+    protected $primaryKey = 'NOARTICLE';
+    protected $allowedFields = ['TITRE', 'TEXTE', 'NOMFICHIERIMAGE'];
 
     public function retournerArticles($NoArticle = false)
     {
@@ -16,6 +16,6 @@ class ModeleArticle extends Model
         {
             return $this->findAll();
         }
-        return $this->where(['cNo' => $NoArticle])->first();
+        return $this->where(['NOARTICLE' => $NoArticle])->first();
     }
 }
