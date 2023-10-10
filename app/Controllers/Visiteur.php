@@ -76,7 +76,7 @@ class Visiteur extends BaseController
             $UtilisateurRetourne = $modelUti->retournerUtilisateur($Identifiant, $MdP);
             if (!($UtilisateurRetourne == null)) {
                 $session->set('identifiant', $UtilisateurRetourne["IDENTIFIANT"]);
-                $session->set('statut', $UtilisateurRetourne["STATUT"]);
+                $session->set('roles', $UtilisateurRetourne["ROLES"]);
                 $data['Identifiant'] = $Identifiant;
                 echo view('templates/header', $data);
                 echo view('visiteur/connexionReussie');

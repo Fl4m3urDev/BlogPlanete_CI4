@@ -6,10 +6,11 @@
                 <?php foreach ($lesArticles as $unArticle) : ?>
                     <tr>
                         <td><?php echo anchor('visiteur/voirUnArticle/' . $unArticle["NOARTICLE"], $unArticle["TITRE"]); ?></td>
-                        <?php $session = session(); ?>
-                        <?php if ($session->get('statut') == 2) : ?>
-                        <td><a class="text-white" href="<?php echo site_url('administrateur/modifierUnArticle/' . $unArticle["NOARTICLE"]) ?>"><button class="btn btn-primary">Modifier</button></a></td>
-                        <td><a class="text-white" href="<?php echo site_url('administrateur/supprimerUnArticle/' . $unArticle["NOARTICLE"]) ?>"><button class="btn btn-primary">Supprimer</button></a></td>
+                        <?php $session = session();
+                        $admin['ROLE_ADMIN'] = json_encode(['ROLE_ADMIN']); ?>
+                        <?php if ($session->get('roles') == $admin['ROLE_ADMIN']) : ?>
+                            <td><a class="text-white" href="<?php echo site_url('administrateur/modifierUnArticle/' . $unArticle["NOARTICLE"]) ?>"><button class="btn btn-primary">Modifier</button></a></td>
+                            <td><a class="text-white" href="<?php echo site_url('administrateur/supprimerUnArticle/' . $unArticle["NOARTICLE"]) ?>"><button class="btn btn-primary">Supprimer</button></a></td>
                         <?php endif; ?>
                     </tr>
                 <?php endforeach ?>

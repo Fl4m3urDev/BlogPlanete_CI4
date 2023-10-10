@@ -13,7 +13,8 @@ class Administrateur extends BaseController
     public function ajouterUnArticle()
     {
         $session = session();
-        if ($session->get('statut') != 2) {
+        $admin['ROLE_ADMIN'] = json_encode(['ROLE_ADMIN']);
+        if ($session->get('roles') != $admin['ROLE_ADMIN']) {
             return redirect()->to('Visiteur/seConnecter');
         }
         $data['TitreDeLaPage'] = 'Ajouter un article';
@@ -54,7 +55,8 @@ class Administrateur extends BaseController
         $modelArt = new ModeleArticle();
         $data['unArticle'] = $modelArt->retournerArticles($cNo);
         $session = session();
-        if ($session->get('statut') != 2) {
+        $admin['ROLE_ADMIN'] = json_encode(['ROLE_ADMIN']);
+        if ($session->get('roles') != $admin['ROLE_ADMIN']) {
             return redirect()->to('Visiteur/seConnecter');
         }
         $data['TitreDeLaPage'] = 'Modifier un article';
@@ -101,7 +103,9 @@ class Administrateur extends BaseController
     public function ajouterUnAvis()
     {
         $session = session();
-        if ($session->get('statut') != 1 && $session->get('statut') != 2) {
+        $admin['ROLE_ADMIN'] = json_encode(['ROLE_ADMIN']);
+        $user['ROLE_USER'] = json_encode(['ROLE_USER']);
+        if ($session->get('roles') != $user['ROLE_USER'] && $session->get('roles') != $admin['ROLE_ADMIN']) {
             return redirect()->to('Visiteur/seConnecter');
         }
         $modelArt = new ModeleArticle();

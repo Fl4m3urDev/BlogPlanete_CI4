@@ -7,7 +7,6 @@ use CodeIgniter\Model;
 class ModeleUtilisateur extends Model
 {
     protected $table = 'utilisateur';
-    //protected $primaryKey = 'cNo';
 
     public function retournerUtilisateur($pId, $MotdePasse)
     {
