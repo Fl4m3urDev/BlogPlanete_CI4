@@ -61,7 +61,7 @@ class Visiteur extends BaseController
                 'required' => 'Un Identifiant est requis'
             ],
             'txtMotDePasse' => [
-                'required' => 'Un mot de passe est requis',
+                'required' => 'Un Mot de passe est requis',
             ]
         ];
 
@@ -76,12 +76,12 @@ class Visiteur extends BaseController
             $UtilisateurRetourne = $modelUti->retournerUtilisateur($Identifiant, $MdP);
             if (!($UtilisateurRetourne == null)) {
                 $session->set('identifiant', $UtilisateurRetourne["IDENTIFIANT"]);
-                $session->set('roles', $UtilisateurRetourne["ROLES"]);
+                $session->set('statut', $UtilisateurRetourne["STATUT"]);
                 $data['Identifiant'] = $Identifiant;
                 echo view('templates/header', $data);
                 echo view('visiteur/connexionReussie');
             } else {
-                if ($_POST) $data['TitreDeLaPage'] = "Logging inexistant";
+                if ($_POST) $data['TitreDeLaPage'] = "Erreur de Connexion - Identifiant ou Mot de passe incorrect";
                 return view('templates/header', $data)
                 .view('visiteur/seConnecter');
             }

@@ -16,9 +16,7 @@
     <?php } ?>
     <br>
     <?php $session = session();
-    $admin['ROLE_ADMIN'] = json_encode(['ROLE_ADMIN']);
-    $user['ROLE_USER'] = json_encode(['ROLE_USER']);
-    if ($session->get('roles') == $user['ROLE_USER'] or $session->get('roles') == $admin['ROLE_ADMIN']) : ?>
+    if ($session->get('statut') == 1 or $session->get('statut') == 2) : ?>
         <p><a class="text-black" href="<?php echo site_url('administrateur/ajouterUnAvis/' . $unArticle["NOARTICLE"]) ?>">Ajouter un avis</a></p>
     <?php endif; ?>
 </div>

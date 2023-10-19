@@ -23,11 +23,10 @@
         <div class="container-fluid justify-content-center">
             <ul class="navbar-nav">
                 <?php $session = session();
-                $admin['ROLE_ADMIN'] = json_encode(['ROLE_ADMIN']);
                 if (!is_null($session->get('identifiant'))) : ?>
                     <li class="nav-item text-white"><a class="nav-link">Utilisateur connecté : <?php echo $session->get('identifiant'); ?></a></li>
                     <li class="nav-item"><a class="nav-link" href="<?php echo site_url('visiteur/seDeconnecter') ?>">Se déconnecter</a></li>
-                    <?php if ($session->get('roles') == $admin['ROLE_ADMIN']) : ?>
+                    <?php if ($session->get('statut') == 2) : ?>
                         <li class="nav-item"><a class="nav-link" href="<?php echo site_url('administrateur/ajouterUnArticle') ?>">Ajouter un article</a></li>
                     <?php endif; ?>
                 <?php else : ?>

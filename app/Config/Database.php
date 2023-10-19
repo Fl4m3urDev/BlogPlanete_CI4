@@ -29,7 +29,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'blogplanete',
+        'database' => 'blogplanete_ci',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
