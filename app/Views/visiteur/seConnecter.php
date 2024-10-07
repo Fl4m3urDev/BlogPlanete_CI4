@@ -1,8 +1,8 @@
-<div class="container mt-5">
+<div class="container px-4 py-2">
     <h2><?php echo $TitreDeLaPage ?></h2>
     <?php
     if ($TitreDeLaPage == 'Corriger votre formulaire') echo service('validation')->listErrors();
-    echo form_open('visiteur/seconnecter');
+    echo form_open('visiteur/seConnecter');
     echo csrf_field(); ?>
     <div class="mb-3 mt-3">
         <?php echo form_label('Identifiant', 'txtIdentifiant', ['class' => 'form-label']);

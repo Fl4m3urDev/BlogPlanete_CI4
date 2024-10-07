@@ -25,14 +25,7 @@ class ModeleAvis extends Model
         return $this->where(['avis.NOARTICLE' => $NoArticle])
         ->join('article', 'article.NOARTICLE = avis.NOARTICLE')
         ->join('utilisateur', 'utilisateur.NOUTILISATEUR = avis.NOUTILISATEUR')
-        ->select('article.TITRE, utilisateur.IDENTIFIANT, avis.TITRE, avis.CONTENU')
+        ->select('avis.NOAVIS, article.TITRE as articleTitre, utilisateur.IDENTIFIANT, avis.TITRE, avis.CONTENU')
         ->findAll();
     }
-
-    // public function insererAvis($sql)
-    // {
-    //     $sql = "INSERT INTO avis (NOAVIS, NOUTILISATEUR, TITRE, CONTENU) "
-    //     . "VALUES (" . $_GET['NOAVIS'] . ", " . $_SESSION['IDENTIFIANT']->NOUTILISATEUR . ", " . $_GET['TITRE'] . ", " . $_GET['CONTENU'] . ")";
-    //     return $sql;
-    // }
 }

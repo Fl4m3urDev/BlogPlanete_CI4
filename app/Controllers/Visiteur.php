@@ -21,7 +21,7 @@ class Visiteur extends BaseController
 
     public function listerLesArticlesAvecPagination()
     {
-        $pager = \Config\Services::pager();
+        $pager = service('pager');
         $modelArt = new ModeleArticle();
         $data['lesArticles'] = $modelArt->paginate(3);
         $data['pager'] = $modelArt->pager;
@@ -77,13 +77,16 @@ class Visiteur extends BaseController
             if (!($UtilisateurRetourne == null)) {
                 $session->set('identifiant', $UtilisateurRetourne["IDENTIFIANT"]);
                 $session->set('statut', $UtilisateurRetourne["STATUT"]);
+                $session->set('NOUTILISATEUR', $UtilisateurRetourne["NOUTILISATEUR"]);
                 $data['Identifiant'] = $Identifiant;
-                echo view('templates/header', $data);
-                echo view('visiteur/connexionReussie');
+                return view('templates/header', $data)
+                    . view('visiteur/connexionReussie')
+                    . view('templates/footer');
             } else {
                 if ($_POST) $data['TitreDeLaPage'] = "Erreur de Connexion - Identifiant ou Mot de passe incorrect";
                 return view('templates/header', $data)
-                .view('visiteur/seConnecter');
+                    . view('visiteur/seConnecter')
+                    . view('templates/footer');
             }
         }
         return view('templates/footer');

@@ -2,7 +2,7 @@
     <h2><?php echo $TitreDeLaPage ?></h2>
     <?php
     if ($TitreDeLaPage == 'Corriger votre avis') echo service('validation')->listErrors();
-    echo form_open_multipart('administrateur/ajouterUnAvis') ?>
+    echo form_open('administrateur/ajouterUnAvis/' . $unArticle["NOARTICLE"]); ?>
     <?php echo csrf_field(); ?>
     <div class="mb-3 mt-3">
         <?php echo form_label('Titre de l\'avis', 'txtTitre', ['class' => 'form-label']);

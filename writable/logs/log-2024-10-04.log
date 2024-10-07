@@ -121,3 +121,141 @@ INFO - 2024-10-04 16:36:45 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-10-04 16:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-10-04 16:36:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-10-04 16:36:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:03:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:09:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:10:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:10:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:10:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:10:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:22:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:22:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:23:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:23:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-04 17:23:41 --> ErrorException: Undefined array key "IDENTIFIANT"
+[Method: GET, Route: administrateur/ajouterUnAvis/4]
+in APPPATH\Controllers\Administrateur.php on line 110.
+ 1 APPPATH\Controllers\Administrateur.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "IDENTIFIANT"', 'C:\\xampp\\htdocs\\Projet_Training\\BlogPlanete_CI4\\app\\Controllers\\Administrateur.php', 110)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrateur->ajouterUnAvis('4')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrateur))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projet_Training\\BlogPlanete_CI4\\public\\index.php')
+INFO - 2024-10-04 17:23:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-04 17:23:55 --> ErrorException: Undefined array key "NOUTILISATEUR"
+[Method: GET, Route: administrateur/ajouterUnAvis/4]
+in APPPATH\Controllers\Administrateur.php on line 110.
+ 1 APPPATH\Controllers\Administrateur.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "NOUTILISATEUR"', 'C:\\xampp\\htdocs\\Projet_Training\\BlogPlanete_CI4\\app\\Controllers\\Administrateur.php', 110)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrateur->ajouterUnAvis('4')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrateur))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projet_Training\\BlogPlanete_CI4\\public\\index.php')
+INFO - 2024-10-04 17:24:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-04 17:24:04 --> ErrorException: Undefined array key "NOUTILISATEUR"
+[Method: GET, Route: administrateur/ajouterUnAvis/4]
+in APPPATH\Controllers\Administrateur.php on line 110.
+ 1 APPPATH\Controllers\Administrateur.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "NOUTILISATEUR"', 'C:\\xampp\\htdocs\\Projet_Training\\BlogPlanete_CI4\\app\\Controllers\\Administrateur.php', 110)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrateur->ajouterUnAvis('4')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrateur))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projet_Training\\BlogPlanete_CI4\\public\\index.php')
+INFO - 2024-10-04 17:24:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:26:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:26:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:26:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:26:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:26:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:26:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:45:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:46:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-04 17:46:32 --> ErrorException: Undefined array key "TITRE"
+[Method: GET, Route: administrateur/ajouterUnAvis/4]
+in APPPATH\Controllers\Administrateur.php on line 112.
+ 1 APPPATH\Controllers\Administrateur.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "TITRE"', 'C:\\xampp\\htdocs\\Projet_Training\\BlogPlanete_CI4\\app\\Controllers\\Administrateur.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrateur->ajouterUnAvis('4')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrateur))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projet_Training\\BlogPlanete_CI4\\public\\index.php')
+INFO - 2024-10-04 17:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:52:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-04 17:52:07 --> ErrorException: Undefined variable $data
+[Method: GET, Route: administrateur/ajouterUnAvis/4]
+in APPPATH\Views\administrateur\ajouterUnAvis.php on line 8.
+ 1 APPPATH\Views\administrateur\ajouterUnAvis.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\Projet_Training\\BlogPlanete_CI4\\app\\Views\\administrateur\\ajouterUnAvis.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Projet_Training\\BlogPlanete_CI4\\app\\Views\\administrateur\\ajouterUnAvis.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrateur/ajouterUnAvis', [], true)
+ 5 APPPATH\Controllers\Administrateur.php(130): view('administrateur/ajouterUnAvis', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrateur->ajouterUnAvis('4')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrateur))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projet_Training\\BlogPlanete_CI4\\public\\index.php')
+INFO - 2024-10-04 17:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:58:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 17:58:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-04 17:58:59 --> ParseError: syntax error, unexpected token ";", expecting ")"
+[Method: GET, Route: administrateur/ajouterUnAvis/4]
+in APPPATH\Views\administrateur\ajouterUnAvis.php on line 8.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrateur/ajouterUnAvis', [], true)
+ 3 APPPATH\Controllers\Administrateur.php(130): view('administrateur/ajouterUnAvis', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrateur->ajouterUnAvis('4')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrateur))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projet_Training\\BlogPlanete_CI4\\public\\index.php')
+INFO - 2024-10-04 17:59:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-04 17:59:13 --> ParseError: syntax error, unexpected token ";", expecting ")"
+[Method: GET, Route: administrateur/ajouterUnAvis/4]
+in APPPATH\Views\administrateur\ajouterUnAvis.php on line 8.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('administrateur/ajouterUnAvis', [], true)
+ 3 APPPATH\Controllers\Administrateur.php(130): view('administrateur/ajouterUnAvis', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrateur->ajouterUnAvis('4')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrateur))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projet_Training\\BlogPlanete_CI4\\public\\index.php')
+INFO - 2024-10-04 18:00:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 18:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-04 18:03:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-04 18:03:05 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: administrateur/ajouterUnAvis]
+in APPPATH\Controllers\Administrateur.php on line 112.
+ 1 APPPATH\Controllers\Administrateur.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\Projet_Training\\BlogPlanete_CI4\\app\\Controllers\\Administrateur.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Administrateur->ajouterUnAvis()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrateur))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projet_Training\\BlogPlanete_CI4\\public\\index.php')
+INFO - 2024-10-04 18:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

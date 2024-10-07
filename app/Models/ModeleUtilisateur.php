@@ -10,7 +10,9 @@ class ModeleUtilisateur extends Model
 
     public function retournerUtilisateur($pId, $MotdePasse)
     {
-        return $this->where(['IDENTIFIANT' => $pId, 'MOTDEPASSE' => $MotdePasse])->first();
+        return $this->where(['IDENTIFIANT' => $pId, 'MOTDEPASSE' => $MotdePasse])
+        ->select('NOUTILISATEUR, IDENTIFIANT, STATUT')
+        ->first();
     }
 
     public function retournerUtilisateurParNo($NoUtilisateur)
